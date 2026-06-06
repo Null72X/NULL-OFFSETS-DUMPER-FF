@@ -81,7 +81,7 @@ class Program
                     ("Player", "OIAJCBLDHKP", "Player_Name"),
                     ("ReplicationEntity", "m_PRIDataPool", "Player_Data"),
                     ("PlayerNetwork", "m_ShadowState", "Player_ShadowBase"),
-                    ("PlayerNetwork.HHCBNAPCKHF", "ADFIDIPODGK", "XPose"),
+                    ("HHCBNAPCKHF", "ADFIDIPODGK", "XPose"),
                     ("Player", "JKPFFNEMJIF", "PlayerAttributes"),
 
                     ("Player", "FOGJNGDMJKJ", "AvatarManager"),
@@ -105,7 +105,7 @@ class Program
                     ("Player", "COLEAPKGFLK", "InventoryManager"),
                     ("NPCNMJAGIKI", "LFEPIIENLAF", "WeaponOnHand"),
                     ("GPBDEDFKJNA", "LAEMLAPIAFD", "WeaponInfo"),
-                    ("NPCNMJAGIKI.CHBEAKBLDPI", "HEONOMOEOLN", "WeaponID"),
+                    ("CHBEAKBLDPI", "HEONOMOEOLN", "WeaponID"),
                     ("PlayerAttributes", "BuffWeaponAmmoClip", "BuffWeaponAmmoClip"),
 
                     ("Player", "IsClientBot", "IsClientBot"),
