@@ -1,0 +1,72 @@
+namespace Client
+{
+    internal static class Offsets
+    {
+        // Core
+        internal static uint Il2Cpp;
+        internal static uint InitBase = 0x9EC1C48;
+        internal static uint StaticClass = 0x5C;
+
+        // General
+        internal static uint CurrentMatch = 0x50;
+        internal static uint MatchStatus = 0x0;
+        internal static uint LocalPlayer = 0x0;
+        internal static uint DictionaryEntities = 0x68;
+
+        // Player
+        internal static uint Player_IsDead = 0x0;
+        internal static uint Player_Name = 0x0;
+        internal static uint Player_Data = 0x48;
+        internal static uint Player_ShadowBase = 0x18B8;
+        internal static uint XPose = 0x0;
+        internal static uint PlayerAttributes = 0x0;
+
+        // Avatar
+        internal static uint AvatarManager = 0x0;
+        internal static uint Avatar = 0x0;
+        internal static uint Avatar_IsVisible = 0x95;
+        internal static uint Avatar_Data = 0x14;
+        internal static uint Avatar_Data_IsTeam = 0x59;
+
+        // Camera
+        internal static uint FollowCamera = 0x0;
+        internal static uint Camera = 0x0;
+        internal static uint MainCameraTransform = 0x24C;
+        internal static uint AimRotation = 0x0;
+        internal static uint ViewMatrix = 0xE8;
+
+        // Weapon
+        internal static uint Weapon = 0x3F4;
+        internal static uint WeaponData = 0x0;
+        internal static uint WeaponRecoil = 0x0;
+        internal static uint InventoryManager = 0x0;
+        internal static uint WeaponOnHand = 0x0;
+        internal static uint WeaponInfo = 0x0;
+        internal static uint WeaponID = 0x0;
+        internal static uint BuffWeaponAmmoClip = 0xD0;
+
+        // Extra
+        internal static uint IsClientBot = 0x2E4;
+        internal static uint InfinitySkyler = 0x0;
+        internal static uint BaseProfileInfo = 0x0;
+
+        // Observer
+        internal static uint CurrentObserver = 0x0;
+        internal static uint ObserverPlayer = 0x0;
+
+        // Speed Internal
+        internal static uint FixedDeltaTime = 0x10;
+        internal static uint GameTimer = 0x24;
+
+        // Silent Aim
+        internal static uint sAim1 = 0x0;
+        internal static uint sAim2 = 0x0;
+        internal static uint sAim3 = 0x0;
+        internal static uint sAim4 = 0x0;
+
+        // Aimbot
+        internal static uint AimbotVisible = 0x0;
+        internal static uint HeadCollider = 0x0;
+
+    }
+}

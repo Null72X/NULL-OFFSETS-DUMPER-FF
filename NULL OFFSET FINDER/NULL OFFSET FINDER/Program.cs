@@ -82,18 +82,19 @@ class Program
                     ("ReplicationEntity", "m_PRIDataPool", "Player_Data"),
                     ("PlayerNetwork", "m_ShadowState", "Player_ShadowBase"),
                     ("HHCBNAPCKHF", "ADFIDIPODGK", "XPose"),
-                    ("Player", "JKPFFNEMJIF", "PlayerAttributes"),
+                    ("Player", "KDJHNBAECLM", "PlayerAttributes"),
 
-                    ("Player", "FOGJNGDMJKJ", "AvatarManager"),
-                    ("AvatarManager", "EEAGBKBMBLD", "Avatar"),
+                    ("Player", "KPMDIPJINJO", "AvatarManager"),
+                    ("AvatarManager", "GIAMMAADHFN", "Avatar"),
                     ("UmaAvatarSimple", "IsVisible", "Avatar_IsVisible"),
                     ("UMAAvatarBase", "umaData", "Avatar_Data"),
                     ("UMAData", "isTeammate", "Avatar_Data_IsTeam"),
+                    ("PlayerNetwork", "KAKEEBABBIP", "BaseProfileInfo"),
 
-                    ("Player", "CHDOHNOEBML", "FollowCamera"),
-                    ("CameraControllerBase", "FCKFGJMEECI", "Camera"),
+                    ("Player", "OHEPMNHMJMK", "FollowCamera"),
+                    ("CameraControllerBase", "ALGPBKBHFAL", "Camera"),
                     ("Player", "MainCameraTransform", "MainCameraTransform"),
-                    ("Player", "<KCFEHMAIINO>k__BackingField", "AimRotation"),
+                    ("Player", "<MDCADLIAJIH>k__BackingField", "AimRotation"),
                     ("BaseRuntimePanel", "panelToWorld", "ViewMatrix"),
 
                     ("NFJPHMKKEBF", "BGGJJKKKFDC", "CurrentObserver"),
@@ -105,46 +106,46 @@ class Program
                     ("Player", "COLEAPKGFLK", "InventoryManager"),
                     ("NPCNMJAGIKI", "LFEPIIENLAF", "WeaponOnHand"),
                     ("GPBDEDFKJNA", "LAEMLAPIAFD", "WeaponInfo"),
-                    ("CHBEAKBLDPI", "HEONOMOEOLN", "WeaponID"),
+                    ("AGACNOCEEFP", "FPANKJIJBIH", "WeaponID"),
                     ("PlayerAttributes", "BuffWeaponAmmoClip", "BuffWeaponAmmoClip"),
+                    ("PlayerAttributes", "Rapidfire", "Rapidfire"),
 
                     ("Player", "IsClientBot", "IsClientBot"),
                     ("PlayerAttributes", "DPFCEOKBPPP", "InfinitySkyler"),
-                    ("PlayerNetwork", "OJAFLKJINPJ", "BaseProfileInfo"),
 
                     ("TimeService", "m_DeltaTime", "FixedDeltaTime"),
                     ("TimeService", "m_FixedDeltaTime", "GameTimer"),
 
-                    ("Player", "<LPEIEILIKGC>k__BackingField", "sAim1"),
-                    ("Player", "GEGFCFDGGGP", "sAim2"),
-                    ("MADMMIICBNN", "BOGOIAMJFDN", "sAim3"),
-                    ("MADMMIICBNN", "NHKKHPLFMNG", "sAim4"),
+                    ("Player", "NNFKGNCILNK>k__BackingField", "sAim1"),
+                    ("Player", "AKFLHNOIHED", "sAim2"),
+                    ("GMPGMPFNMFP", "LMAEGPEAECO", "sAim3"),
+                    ("GMPGMPFNMFP", "IKDEGKIICJP", "sAim4"),
 
-                    ("Player", "HECFNHJKOMN", "AimbotVisible"),
-                    ("AttackableEntity", "<INICDNFOFJB>k__BackingField", "HeadCollider")
+                    ("Player", "NFDNMIOPILM", "AimbotVisible"),
+                    ("AttackableEntity", "<ACAGMJJNMCN>k__BackingField", "HeadCollider")
                 };
 
                 var bonesTargetsList = new List<(string ClassDef, string Field, string ResultName)>
                 {
-                    ("Player", "OLCJOGDHJJJ", "Head"),
-                    ("Player", "HCLMADAFLPD", "Breast"),
-                    ("Player", "MPJBGDJJJMJ", "Root"),
-                    ("Player", "OLJBCONDGLO", "Hip"),
+                    ("Player", "PEMOFNFCLFB", "Head"),
+                    ("Player", "KNFKIDHJCCO", "Root"),
+                    ("Player", "KAKOKIHEPCF", "Breast"),
+                    ("Player", "DIDHPFKMJJE", "Hip"),
 
-                    ("Player", "JHIBMHEMJOL", "LeftBiceps"),
-                    ("Player", "NJDDAPKPILB", "RightBiceps"),
+                    ("Player", "PNPBBNDANEM", "LeftBiceps"),
+                    ("Player", "DIHJDDNIJHP", "RightBiceps"),
 
-                    ("Player", "FGECMMJKFNC", "LeftWristJoint"),
-                    ("Player", "JBACCHNMGNJ", "RightWristJoint"),
+                    ("Player", "KNBJLEHOPIL", "LeftWristJoint"),
+                    ("Player", "KMIANNCLNOJ", "RightWristJoint"),
 
-                    ("Player", "LIBEIIIAGIK", "LeftShoulder"),
-                    ("Player", "HDEPJIBNIIK", "RightShoulder"),
+                    ("Player", "NBHOEOOCIIG", "LeftShoulder"),
+                    ("Player", "OEJFBHIIBBG", "RightShoulder"),
 
-                    ("Player", "FDMBKCKMODA", "LeftFoot"),
-                    ("Player", "CKABHDJDMAP", "RightFoot"),
+                    ("Player", "JLLMBADGKJP", "LeftFoot"),
+                    ("Player", "INHGPBHOKPF", "RightFoot"),
 
-                    ("Player", "BMGCHFGEDDA", "LeftLeg"),
-                    ("Player", "AGHJLIMNPJA", "RightLeg")
+                    ("Player", "BIPBNNIFCNO", "LeftLeg"),
+                    ("Player", "BOHFCEHMJBD", "RightLeg")
                 };
 
                 Console.WriteLine("\n[+] Extracting Internal Offsets...");

@@ -1,0 +1,20 @@
+namespace Client
+{
+    internal enum Bones : uint
+    {
+        Head = 0x0,
+        Breast = 0x0,
+        Root = 0x0,
+        Hip = 0x0,
+        LeftBiceps = 0x0,
+        RightBiceps = 0x0,
+        LeftWristJoint = 0x0,
+        RightWristJoint = 0x0,
+        LeftShoulder = 0x0,
+        RightShoulder = 0x0,
+        LeftFoot = 0x0,
+        RightFoot = 0x0,
+        LeftLeg = 0x0,
+        RightLeg = 0x0
+    }
+}
