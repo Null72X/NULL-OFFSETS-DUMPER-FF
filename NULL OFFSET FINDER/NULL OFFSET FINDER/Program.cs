@@ -79,6 +79,7 @@ class Program
                 new ExtractionTarget("Player", "LPEALCPGJBL", "InventoryManager", "Weapon"),
                 new ExtractionTarget("OMELKCOGCBK", "CHAFOMFBKEG", "WeaponOnHand", "Weapon"),
                 new ExtractionTarget("FDAEPHMIEPC", "DJMMOHAJFPB", "WeaponInfo", "Weapon"),
+                new ExtractionTarget("FDAEPHMIEPC", "HNLFGAAHBNN", "WeaponType", "Weapon"),
                 new ExtractionTarget("AGACNOCEEFP", "FPANKJIJBIH", "WeaponID", "Weapon"),
                 new ExtractionTarget("PlayerAttributes", "BuffWeaponAmmoClip", "BuffWeaponAmmoClip", "Weapon"),
                 new ExtractionTarget("PlayerAttributes", "BONAJJEOPNF", "Rapidfire", "Weapon"),
@@ -256,7 +257,7 @@ class Program
             writer.WriteLine("    {");
             writer.WriteLine("        // Core");
             writer.WriteLine("        internal static uint Il2Cpp;");
-            writer.WriteLine("        internal static uint InitBase = 0x9EC1C48;");
+            writer.WriteLine("        internal static uint InitBase = 0xA9870BC;");
             writer.WriteLine("        internal static uint StaticClass = 0x5C;\n");
 
             var grouped = results.GroupBy(r => r.Target.GroupName);
