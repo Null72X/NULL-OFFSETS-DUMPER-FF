@@ -4,66 +4,67 @@ namespace Client
     {
         // Core
         internal static uint Il2Cpp;
-        internal static uint InitBase = 0x9EC1C48;
+        internal static uint InitBase = 0xA342EFC;
         internal static uint StaticClass = 0x5C;
 
         // General
-        internal static uint CurrentMatch             = 0x50; // MatchGame.m_Match [Line 3,26,484]
-        internal static uint MatchStatus              = 0x8C; // EMKJHAJNPDH.MAOHIOEAMEA [Line 11,96,815]
-        internal static uint LocalPlayer              = 0x94; // EMKJHAJNPDH.PDBGEOANOEP [Line 11,96,817]
-        internal static uint DictionaryEntities       = 0x68; // MatchGame.m_ReplicationEntitis [Line 3,26,490]
+        internal static uint CurrentMatch             = 0x50; // MatchGame.m_Match [Line 3,04,598]
+        internal static uint MatchStatus              = 0x8c; // JMAGGLCNGIG.LOEPAKMFNJO [Line 10,58,013]
+        internal static uint LocalPlayer              = 0x94; // JMAGGLCNGIG.MHJCLOPOBAA [Line 10,58,015]
+        internal static uint DictionaryEntities       = 0x68; // MatchGame.m_ReplicationEntitis [Line 3,04,604]
 
         // Player
-        internal static uint Player_IsDead            = 0x50; // AttackableEntity.PIKCADEGMOH [Line 11,70,391]
-        internal static uint Player_Name              = 0x2E0; // Player.OriginalNickName [Line 11,76,840]
-        internal static uint Player_Data              = 0x48; // ReplicationEntity.m_PRIDataPool [Line 13,97,476]
-        internal static uint Player_ShadowBase        = 0x18B8; // PlayerNetwork.m_ShadowState [Line 12,05,431]
-        internal static uint XPose                    = 0x78; // PlayerNetwork.BGDKLEHDFJO [Line 12,05,312]
-        internal static uint LocalPlayerAttributes    = 0x4BC; // Player.KDJHNBAECLM [Line 11,76,983]
+        internal static uint Player_IsDead            = 0x50; // AttackableEntity.CGJLEBOGBNP [Line 10,50,879]
+        internal static uint Player_Name              = 0x320; // Player.OriginalNickName [Line 10,36,182]
+        internal static uint Player_Data              = 0x48; // ReplicationEntity.m_PRIDataPool [Line 12,29,197]
+        internal static uint Player_ShadowBase        = 0x1a60; // PlayerNetwork.m_ShadowState [Line 10,66,808]
+        internal static uint XPose                    = 0x78; // FCIFKKJNAJF.JDFKCAAFFKN [Line 10,66,678]
+        internal static uint LocalPlayerAttributes    = 0x500; // Player.IODLOCEJIOK [Line 10,36,310]
 
         // Avatar
-        internal static uint AvatarManager            = 0x4C0; // Player.KPMDIPJINJO [Line 11,76,984]
-        internal static uint Avatar                   = 0xA8; // AvatarManager.GIAMMAADHFN [Line 11,69,059]
-        internal static uint Avatar_IsVisible         = 0x95; // UmaAvatarSimple.IsVisible [Line 38,301]
-        internal static uint Avatar_Data              = 0x14; // UMAAvatarBase.umaData [Line 34,838]
-        internal static uint Avatar_Data_IsTeam       = 0x59; // UMAData.isTeammate [Line 35,376]
-        internal static uint BaseProfileInfo          = 0x18CC; // PlayerNetwork.KAKEEBABBIP [Line 12,05,436]
+        internal static uint AvatarManager            = 0x504; // Player.GGJOLDEEIEN [Line 10,36,311]
+        internal static uint Avatar                   = 0xa8; // AvatarManager.LHEDBMJJOLM [Line 10,49,948]
+        internal static uint Avatar_IsVisible         = 0x95; // UmaAvatarSimple.IsVisible [Line 33,708]
+        internal static uint Avatar_Data              = 0x14; // UMAAvatarBase.umaData [Line 30,792]
+        internal static uint Avatar_Data_IsTeam       = 0x59; // UMAData.isTeammate [Line 31,271]
+        internal static uint BaseProfileInfo          = 0x1a74; // PlayerNetwork.GFBBIPJFPAD [Line 10,66,813]
 
         // Camera
-        internal static uint FollowCamera             = 0x450; // Player.OHEPMNHMJMK [Line 11,76,956]
-        internal static uint Camera                   = 0x18; // CameraControllerBase.ALGPBKBHFAL [Line 11,90,904]
-        internal static uint MainCameraTransform      = 0x24C; // Player.MainCameraTransform [Line 11,76,811]
-        internal static uint AimRotation              = 0x400; // Player.<MDCADLIAJIH>k__BackingField [Line 11,76,938]
-        internal static uint ViewMatrix               = 0xE8; // BaseRuntimePanel.panelToWorld [Line 19,39,695]
+        internal static uint FollowCamera             = 0x494; // Player.AHNCPOJPPCL [Line 10,36,283]
+        internal static uint Camera                   = 0x18; // CameraControllerBase.AFMGCAELKBD [Line 10,53,027]
+        internal static uint MainCameraTransform      = 0x28c; // Player.MainCameraTransform [Line 10,36,160]
+        internal static uint AimRotation              = 0x440; // Player.<AKKPEKIHGAH>k__BackingField [Line 10,36,266]
+        internal static uint ViewMatrix               = 0xe8; // BaseRuntimePanel.panelToWorld [Line 15,25,800]
 
         // Observer
-        internal static uint CurrentObserver          = 0xB4; // EMKJHAJNPDH.MPMAGJDHNBI [Line 11,96,820]
-        internal static uint ObserverPlayer           = 0x28; // PHLHIEGPMMK.JAGIFDNJJFD [Line 13,11,975]
+        internal static uint CurrentObserver          = 0xb4; // JMAGGLCNGIG.DGDPMNMOAFP [Line 10,58,018]
+        internal static uint ObserverPlayer           = 0x28; // NGOJGBFHDIM.EPLJDLHLHCH [Line 11,56,390]
 
         // Weapon
-        internal static uint Weapon                   = 0x3F4; // Player.ActiveUISightingWeapon [Line 11,76,934]
-        internal static uint WeaponData               = 0x58; // FDAEPHMIEPC.<FLCGCBLDMLK>k__BackingField [Line 12,26,232]
-        internal static uint WeaponRecoil             = 0xC; // BNFFFLEJGMA.HKNJLOBGIDP [Line 12,30,160]
-        internal static uint InventoryManager         = 0x4A8; // Player.LPEALCPGJBL [Line 11,76,978]
-        internal static uint WeaponOnHand             = 0x54; // OMELKCOGCBK.CHAFOMFBKEG [Line 12,09,156]
-        internal static uint WeaponInfo               = 0x64; // FDAEPHMIEPC.DJMMOHAJFPB [Line 12,26,235]
-        internal static uint WeaponID                 = 0x14; // AGACNOCEEFP.FPANKJIJBIH [Line 11,65,041]
-        internal static uint BuffWeaponAmmoClip       = 0xD0; // PlayerAttributes.BuffWeaponAmmoClip [Line 13,14,066]
-        internal static uint Rapidfire                = 0x18C; // PlayerAttributes.BONAJJEOPNF [Line 13,14,118]
+        internal static uint Weapon                   = 0x434; // Player.ActiveUISightingWeapon [Line 10,36,263]
+        internal static uint WeaponData               = 0x58; // HBIBDMMOOOK.<BDKDBILOMDE>k__BackingField [Line 10,84,030]
+        internal static uint WeaponRecoil             = 0xc; // MBJCPLOAJJA.IHCKHAFILED [Line 10,87,139]
+        internal static uint InventoryManager         = 0x4ec; // Player.BKEPAKCAGNJ [Line 10,36,305]
+        internal static uint WeaponOnHand             = 0x54; // GMOCOOEIFMK.LMFNCLKHIIO [Line 10,69,887]
+        internal static uint WeaponInfo               = 0x64; // HBIBDMMOOOK.PIILKNEHNLB [Line 10,84,033]
+        internal static uint WeaponType               = 0x50; // HBIBDMMOOOK.CDLKMHHONMG [Line 10,84,021]
+        internal static uint WeaponID                 = 0x14; // IOKEALMHBKN.KDCCLEKOOAJ [Line 10,29,948]
+        internal static uint BuffWeaponAmmoClip       = 0x104; // PlayerAttributes.BuffWeaponAmmoClip [Line 11,58,505]
+        internal static uint Rapidfire                = 0x1c0; // PlayerAttributes.NOPODIILEKG [Line 11,58,549]
 
         // Speed Internal
-        internal static uint FixedDeltaTime           = 0x10; // TimeService.m_DeltaTime [Line 13,94,076]
-        internal static uint GameTimer                = 0x24; // TimeService.m_FixedDeltaTime [Line 13,94,081]
+        internal static uint FixedDeltaTime           = 0x10; // TimeService.m_DeltaTime [Line 12,26,302]
+        internal static uint GameTimer                = 0x24; // TimeService.m_FixedDeltaTime [Line 12,26,307]
 
         // Silent Aim
-        internal static uint sAim1                    = 0x540; // Player.NNFKGNCILNK>k__BackingField [Line 11,77,028]
-        internal static uint sAim2                    = 0x978; // Player.AKFLHNOIHED [Line 11,77,348]
-        internal static uint sAim3                    = 0x38; // GMPGMPFNMFP.LMAEGPEAECO [Line 13,04,282]
-        internal static uint sAim4                    = 0x2C; // GMPGMPFNMFP.IKDEGKIICJP [Line 13,04,281]
+        internal static uint sAim1                    = 0x58c; // Player.<AHDLLHMLNFI>k__BackingField [Line 10,36,351]
+        internal static uint sAim2                    = 0x9d0; // Player.FDMIEDDNCEC [Line 10,36,656]
+        internal static uint sAim3                    = 0x38; // CGKJLKPMGDJ.EKPLMDDKOGB [Line 11,49,652]
+        internal static uint sAim4                    = 0x2c; // CGKJLKPMGDJ.HLDECMJFKJK [Line 11,49,651]
 
         // Aimbot
-        internal static uint AimbotVisible            = 0x4A4; // Player.NFDNMIOPILM [Line 11,76,977]
-        internal static uint HeadCollider             = 0x54; // AttackableEntity.<ACAGMJJNMCN>k__BackingField [Line 11,70,393]
+        internal static uint AimbotVisible            = 0x4e8; // Player.BANPEGJEAKE [Line 10,36,304]
+        internal static uint HeadCollider             = 0x54; // AttackableEntity.<AONPKGBGHHI>k__BackingField [Line 10,50,880]
 
     }
 }

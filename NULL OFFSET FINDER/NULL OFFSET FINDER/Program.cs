@@ -41,86 +41,86 @@ class Program
             {
                 // General
                 new ExtractionTarget("MatchGame", "m_Match", "CurrentMatch", "General"),
-                new ExtractionTarget("EMKJHAJNPDH", "MAOHIOEAMEA", "MatchStatus", "General"),
-                new ExtractionTarget("EMKJHAJNPDH", "PDBGEOANOEP", "LocalPlayer", "General"),
+                new ExtractionTarget("JMAGGLCNGIG", "LOEPAKMFNJO", "MatchStatus", "General"),
+                new ExtractionTarget("JMAGGLCNGIG", "MHJCLOPOBAA", "LocalPlayer", "General"),
                 new ExtractionTarget("MatchGame", "m_ReplicationEntitis", "DictionaryEntities", "General"),
 
                 // Player
-                new ExtractionTarget("AttackableEntity", "PIKCADEGMOH", "Player_IsDead", "Player"),
+                new ExtractionTarget("AttackableEntity", "CGJLEBOGBNP", "Player_IsDead", "Player"),
                 new ExtractionTarget("Player", "OriginalNickName", "Player_Name", "Player"),
                 new ExtractionTarget("ReplicationEntity", "m_PRIDataPool", "Player_Data", "Player"),
                 new ExtractionTarget("PlayerNetwork", "m_ShadowState", "Player_ShadowBase", "Player"),
-                new ExtractionTarget("PlayerNetwork", "BGDKLEHDFJO", "XPose", "Player"),
-                new ExtractionTarget("Player", "KDJHNBAECLM", "LocalPlayerAttributes", "Player"),
+                new ExtractionTarget("FCIFKKJNAJF", "JDFKCAAFFKN", "XPose", "Player"),
+                new ExtractionTarget("Player", "IODLOCEJIOK", "LocalPlayerAttributes", "Player"),
 
                 // Avatar
-                new ExtractionTarget("Player", "KPMDIPJINJO", "AvatarManager", "Avatar"),
-                new ExtractionTarget("AvatarManager", "GIAMMAADHFN", "Avatar", "Avatar"),
+                new ExtractionTarget("Player", "GGJOLDEEIEN", "AvatarManager", "Avatar"),
+                new ExtractionTarget("AvatarManager", "LHEDBMJJOLM", "Avatar", "Avatar"),
                 new ExtractionTarget("UmaAvatarSimple", "IsVisible", "Avatar_IsVisible", "Avatar"),
                 new ExtractionTarget("UMAAvatarBase", "umaData", "Avatar_Data", "Avatar"),
                 new ExtractionTarget("UMAData", "isTeammate", "Avatar_Data_IsTeam", "Avatar"),
-                new ExtractionTarget("PlayerNetwork", "KAKEEBABBIP", "BaseProfileInfo", "Avatar"),
+                new ExtractionTarget("PlayerNetwork", "GFBBIPJFPAD", "BaseProfileInfo", "Avatar"),
 
                 // Camera
-                new ExtractionTarget("Player", "OHEPMNHMJMK", "FollowCamera", "Camera"),
-                new ExtractionTarget("CameraControllerBase", "ALGPBKBHFAL", "Camera", "Camera"),
+                new ExtractionTarget("Player", "AHNCPOJPPCL", "FollowCamera", "Camera"),
+                new ExtractionTarget("CameraControllerBase", "AFMGCAELKBD", "Camera", "Camera"),
                 new ExtractionTarget("Player", "MainCameraTransform", "MainCameraTransform", "Camera"),
-                new ExtractionTarget("Player", "<MDCADLIAJIH>k__BackingField", "AimRotation", "Camera"),
+                new ExtractionTarget("Player", "<AKKPEKIHGAH>k__BackingField", "AimRotation", "Camera"),
                 new ExtractionTarget("BaseRuntimePanel", "panelToWorld", "ViewMatrix", "Camera"),
 
                 // Observer
-                new ExtractionTarget("EMKJHAJNPDH", "MPMAGJDHNBI", "CurrentObserver", "Observer"),
-                new ExtractionTarget("PHLHIEGPMMK", "JAGIFDNJJFD", "ObserverPlayer", "Observer"),
+                new ExtractionTarget("JMAGGLCNGIG", "DGDPMNMOAFP", "CurrentObserver", "Observer"),
+                new ExtractionTarget("NGOJGBFHDIM", "EPLJDLHLHCH", "ObserverPlayer", "Observer"),
 
                 // Weapon
                 new ExtractionTarget("Player", "ActiveUISightingWeapon", "Weapon", "Weapon"),
-                new ExtractionTarget("FDAEPHMIEPC", "<FLCGCBLDMLK>k__BackingField", "WeaponData", "Weapon"),
-                new ExtractionTarget("BNFFFLEJGMA", "HKNJLOBGIDP", "WeaponRecoil", "Weapon"),
-                new ExtractionTarget("Player", "LPEALCPGJBL", "InventoryManager", "Weapon"),
-                new ExtractionTarget("OMELKCOGCBK", "CHAFOMFBKEG", "WeaponOnHand", "Weapon"),
-                new ExtractionTarget("FDAEPHMIEPC", "DJMMOHAJFPB", "WeaponInfo", "Weapon"),
-                new ExtractionTarget("FDAEPHMIEPC", "HNLFGAAHBNN", "WeaponType", "Weapon"),
-                new ExtractionTarget("AGACNOCEEFP", "FPANKJIJBIH", "WeaponID", "Weapon"),
+                new ExtractionTarget("HBIBDMMOOOK", "<BDKDBILOMDE>k__BackingField", "WeaponData", "Weapon"),
+                new ExtractionTarget("MBJCPLOAJJA", "IHCKHAFILED", "WeaponRecoil", "Weapon"),
+                new ExtractionTarget("Player", "BKEPAKCAGNJ", "InventoryManager", "Weapon"),
+                new ExtractionTarget("GMOCOOEIFMK", "LMFNCLKHIIO", "WeaponOnHand", "Weapon"),
+                new ExtractionTarget("HBIBDMMOOOK", "PIILKNEHNLB", "WeaponInfo", "Weapon"),
+                new ExtractionTarget("HBIBDMMOOOK", "CDLKMHHONMG", "WeaponType", "Weapon"),
+                new ExtractionTarget("IOKEALMHBKN", "KDCCLEKOOAJ", "WeaponID", "Weapon"),
                 new ExtractionTarget("PlayerAttributes", "BuffWeaponAmmoClip", "BuffWeaponAmmoClip", "Weapon"),
-                new ExtractionTarget("PlayerAttributes", "BONAJJEOPNF", "Rapidfire", "Weapon"),
+                new ExtractionTarget("PlayerAttributes", "NOPODIILEKG", "Rapidfire", "Weapon"),
 
                 // Speed Internal
                 new ExtractionTarget("TimeService", "m_DeltaTime", "FixedDeltaTime", "Speed Internal"),
                 new ExtractionTarget("TimeService", "m_FixedDeltaTime", "GameTimer", "Speed Internal"),
 
                 // Silent Aim
-                new ExtractionTarget("Player", "NNFKGNCILNK>k__BackingField", "sAim1", "Silent Aim"),
-                new ExtractionTarget("Player", "AKFLHNOIHED", "sAim2", "Silent Aim"),
-                new ExtractionTarget("GMPGMPFNMFP", "LMAEGPEAECO", "sAim3", "Silent Aim"),
-                new ExtractionTarget("GMPGMPFNMFP", "IKDEGKIICJP", "sAim4", "Silent Aim"),
+                new ExtractionTarget("Player", "<AHDLLHMLNFI>k__BackingField", "sAim1", "Silent Aim"),
+                new ExtractionTarget("Player", "FDMIEDDNCEC", "sAim2", "Silent Aim"),
+                new ExtractionTarget("CGKJLKPMGDJ", "EKPLMDDKOGB", "sAim3", "Silent Aim"),
+                new ExtractionTarget("CGKJLKPMGDJ", "HLDECMJFKJK", "sAim4", "Silent Aim"),
 
                 // Aimbot
-                new ExtractionTarget("Player", "NFDNMIOPILM", "AimbotVisible", "Aimbot"),
-                new ExtractionTarget("AttackableEntity", "<ACAGMJJNMCN>k__BackingField", "HeadCollider", "Aimbot")
+                new ExtractionTarget("Player", "BANPEGJEAKE", "AimbotVisible", "Aimbot"),
+                new ExtractionTarget("AttackableEntity", "<AONPKGBGHHI>k__BackingField", "HeadCollider", "Aimbot")//
             };
 
             // Original Bone Order
             var boneTargets = new List<ExtractionTarget>
             {
-                new ExtractionTarget("Player", "PEMOFNFCLFB", "Head", "Bones"),
-                new ExtractionTarget("Player", "KAKOKIHEPCF", "Breast", "Bones"),
-                new ExtractionTarget("Player", "DIDHPFKMJJE", "Hip", "Bones"),
-                new ExtractionTarget("Player", "KNFKIDHJCCO", "Root", "Bones"),
+                new ExtractionTarget("Player", "GBKFHDFCPMD", "Head", "Bones"),
+                new ExtractionTarget("Player", "FFFPCADFFGA", "Breast", "Bones"),
+                new ExtractionTarget("Player", "COBFGNOIPMF", "Hip", "Bones"),
+                new ExtractionTarget("Player", "IIPBIDIBJDK", "Root", "Bones"),
 
-                new ExtractionTarget("Player", "PNPBBNDANEM", "RightBiceps", "Bones"),
-                new ExtractionTarget("Player", "DIHJDDNIJHP", "LeftBiceps", "Bones"),
+                new ExtractionTarget("Player", "CLCEEJMGBGE", "RightBiceps", "Bones"),
+                new ExtractionTarget("Player", "JLAECGNPCHC", "LeftBiceps", "Bones"),
 
-                new ExtractionTarget("Player", "KNBJLEHOPIL", "RightWristJoint", "Bones"),
-                new ExtractionTarget("Player", "KMIANNCLNOJ", "LeftWristJoint", "Bones"),
+                new ExtractionTarget("Player", "IMLDFGHNLBP", "RightWristJoint", "Bones"),
+                new ExtractionTarget("Player", "DJAOGHBOBOJ", "LeftWristJoint", "Bones"),
 
-                new ExtractionTarget("Player", "OEJFBHIIBBG", "RightShoulder", "Bones"),
-                new ExtractionTarget("Player", "NBHOEOOCIIG", "LeftShoulder", "Bones"),
+                new ExtractionTarget("Player", "FFDPGNIKAEK", "RightShoulder", "Bones"),
+                new ExtractionTarget("Player", "FOELKAHABCD", "LeftShoulder", "Bones"),
 
-                new ExtractionTarget("Player", "JLLMBADGKJP", "RightFoot", "Bones"),
-                new ExtractionTarget("Player", "INHGPBHOKPF", "LeftFoot", "Bones"),
+                new ExtractionTarget("Player", "GMJLIMFHMAE", "RightFoot", "Bones"),
+                new ExtractionTarget("Player", "JMHBBGIKBNO", "LeftFoot", "Bones"),
 
-                new ExtractionTarget("Player", "BOHFCEHMJBD", "RightLeg", "Bones"),
-                new ExtractionTarget("Player", "BIPBNNIFCNO", "LeftLeg", "Bones")
+                new ExtractionTarget("Player", "GPIBDOCMHBE", "RightLeg", "Bones"),
+                new ExtractionTarget("Player", "EMNIJJCEKDD", "LeftLeg", "Bones")
             };
 
             // ----------------------------------------------------
@@ -257,7 +257,7 @@ class Program
             writer.WriteLine("    {");
             writer.WriteLine("        // Core");
             writer.WriteLine("        internal static uint Il2Cpp;");
-            writer.WriteLine("        internal static uint InitBase = 0xA9870BC;");
+            writer.WriteLine("        internal static uint InitBase = 0xA342EFC;");
             writer.WriteLine("        internal static uint StaticClass = 0x5C;\n");
 
             var grouped = results.GroupBy(r => r.Target.GroupName);
