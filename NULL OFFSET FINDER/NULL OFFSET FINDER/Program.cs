@@ -50,7 +50,7 @@ class Program
                 new ExtractionTarget("Player", "OriginalNickName", "Player_Name", "Player"),
                 new ExtractionTarget("ReplicationEntity", "m_PRIDataPool", "Player_Data", "Player"),
                 new ExtractionTarget("PlayerNetwork", "m_ShadowState", "Player_ShadowBase", "Player"),
-                new ExtractionTarget("FCIFKKJNAJF", "JDFKCAAFFKN", "XPose", "Player"),
+                new ExtractionTarget("PlayerNetwork", "JDFKCAAFFKN", "XPose", "Player"),
                 new ExtractionTarget("Player", "IODLOCEJIOK", "LocalPlayerAttributes", "Player"),
 
                 // Avatar
@@ -67,6 +67,7 @@ class Program
                 new ExtractionTarget("Player", "MainCameraTransform", "MainCameraTransform", "Camera"),
                 new ExtractionTarget("Player", "<AKKPEKIHGAH>k__BackingField", "AimRotation", "Camera"),
                 new ExtractionTarget("BaseRuntimePanel", "panelToWorld", "ViewMatrix", "Camera"),
+                new ExtractionTarget("FollowCamera", "FOVOffset", "FovIncrease", "Camera"),
 
                 // Observer
                 new ExtractionTarget("JMAGGLCNGIG", "DGDPMNMOAFP", "CurrentObserver", "Observer"),
@@ -79,14 +80,10 @@ class Program
                 new ExtractionTarget("Player", "BKEPAKCAGNJ", "InventoryManager", "Weapon"),
                 new ExtractionTarget("GMOCOOEIFMK", "LMFNCLKHIIO", "WeaponOnHand", "Weapon"),
                 new ExtractionTarget("HBIBDMMOOOK", "PIILKNEHNLB", "WeaponInfo", "Weapon"),
-                new ExtractionTarget("HBIBDMMOOOK", "CDLKMHHONMG", "WeaponType", "Weapon"),
                 new ExtractionTarget("IOKEALMHBKN", "KDCCLEKOOAJ", "WeaponID", "Weapon"),
+                new ExtractionTarget("IOKEALMHBKN", "KEGNGBDFACA", "WeaponType", "Weapon"),
                 new ExtractionTarget("PlayerAttributes", "BuffWeaponAmmoClip", "BuffWeaponAmmoClip", "Weapon"),
                 new ExtractionTarget("PlayerAttributes", "NOPODIILEKG", "Rapidfire", "Weapon"),
-
-                // Speed Internal
-                new ExtractionTarget("TimeService", "m_DeltaTime", "FixedDeltaTime", "Speed Internal"),
-                new ExtractionTarget("TimeService", "m_FixedDeltaTime", "GameTimer", "Speed Internal"),
 
                 // Silent Aim
                 new ExtractionTarget("Player", "<AHDLLHMLNFI>k__BackingField", "sAim1", "Silent Aim"),
