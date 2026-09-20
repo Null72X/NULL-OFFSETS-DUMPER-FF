@@ -123,12 +123,12 @@ The extractor targets the following classes and fields from the IL2CPP dump:
 
 ```text
 NULL-OFFSETS-DUMPER-FF
-│   NULL OFFSET FINDER.sln             # Visual Studio Solution File
+│   NULL-OFFSETS-DUMPER-FF.sln         # Visual Studio Solution File
 │   README.md                          # Project Documentation
 │
-└───NULL OFFSET FINDER                 # Core Project Folder
+└───NULL-OFFSETS-DUMPER-FF             # Core Project Folder
     │   App.config                     # Target Framework Configuration (.NET 4.7.2)
-    │   NULL OFFSET FINDER.csproj      # C# Project File
+    │   NULL-OFFSETS-DUMPER-FF.csproj  # C# Project File
     │   Program.cs                     # Core Extractor Engine
     │
     └───Properties
