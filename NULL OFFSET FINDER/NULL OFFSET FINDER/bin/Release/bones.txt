@@ -2,19 +2,19 @@ namespace Client
 {
     internal enum Bones : uint
     {
-        Head             = 0x49C,   // Raw String: "GBKFHDFCPMD" [Line 12,18,301]
-        Breast           = 0x4A4,   // Raw String: "FFFPCADFFGA" [Line 12,18,303]
-        Hip              = 0x4A0,   // Raw String: "COBFGNOIPMF" [Line 12,18,302]
-        Root             = 0x4B0,   // Raw String: "IIPBIDIBJDK" [Line 12,18,306]
-        RightBiceps      = 0x4DC,   // Raw String: "CLCEEJMGBGE" [Line 12,18,317]
-        LeftBiceps       = 0x4D8,   // Raw String: "JLAECGNPCHC" [Line 12,18,316]
-        RightWristJoint  = 0x4E4,   // Raw String: "IMLDFGHNLBP" [Line 12,18,319]
-        LeftWristJoint   = 0x4E0,   // Raw String: "DJAOGHBOBOJ" [Line 12,18,318]
-        RightShoulder    = 0x4D0,   // Raw String: "FFDPGNIKAEK" [Line 12,18,314]
-        LeftShoulder     = 0x4D4,   // Raw String: "FOELKAHABCD" [Line 12,18,315]
-        RightFoot        = 0x4C0,   // Raw String: "GMJLIMFHMAE" [Line 12,18,310]
-        LeftFoot         = 0x4C4,   // Raw String: "JMHBBGIKBNO" [Line 12,18,311]
-        RightLeg         = 0x4B8,   // Raw String: "GPIBDOCMHBE" [Line 12,18,308]
-        LeftLeg          = 0x4BC    // Raw String: "EMNIJJCEKDD" [Line 12,18,309]
+        Head             = 0x6A0,   // Raw String: "GBKFHDFCPMD" [Line 12,18,301]
+        Breast           = 0x6B0,   // Raw String: "FFFPCADFFGA" [Line 12,18,303]
+        Hip              = 0x6A8,   // Raw String: "COBFGNOIPMF" [Line 12,18,302]
+        Root             = 0x6C8,   // Raw String: "IIPBIDIBJDK" [Line 12,18,306]
+        RightBiceps      = 0x720,   // Raw String: "CLCEEJMGBGE" [Line 12,18,317]
+        LeftBiceps       = 0x718,   // Raw String: "JLAECGNPCHC" [Line 12,18,316]
+        RightWristJoint  = 0x730,   // Raw String: "IMLDFGHNLBP" [Line 12,18,319]
+        LeftWristJoint   = 0x728,   // Raw String: "DJAOGHBOBOJ" [Line 12,18,318]
+        RightShoulder    = 0x708,   // Raw String: "FFDPGNIKAEK" [Line 12,18,314]
+        LeftShoulder     = 0x710,   // Raw String: "FOELKAHABCD" [Line 12,18,315]
+        RightFoot        = 0x6E8,   // Raw String: "GMJLIMFHMAE" [Line 12,18,310]
+        LeftFoot         = 0x6F0,   // Raw String: "JMHBBGIKBNO" [Line 12,18,311]
+        RightLeg         = 0x6D8,   // Raw String: "GPIBDOCMHBE" [Line 12,18,308]
+        LeftLeg          = 0x6E0    // Raw String: "EMNIJJCEKDD" [Line 12,18,309]
     }
 }

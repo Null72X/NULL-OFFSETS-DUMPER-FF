@@ -93,7 +93,7 @@ class Program
 
                 // Aimbot
                 new ExtractionTarget("Player", "BANPEGJEAKE", "AimbotVisible", "Aimbot"),
-                new ExtractionTarget("AttackableEntity", "<AONPKGBGHHI>k__BackingField", "HeadCollider", "Aimbot")//
+                new ExtractionTarget("AttackableEntity", "<AONPKGBGHHI>k__BackingField", "HeadCollider", "Aimbot")
             };
 
             // Original Bone Order

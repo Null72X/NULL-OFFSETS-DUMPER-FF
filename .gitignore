@@ -1,0 +1,74 @@
+﻿# Visual Studio / MSBuild temporary & build directories
+.vs/
+**/.vs/
+[Bb]in/
+[Oo]bj/
+**/[Bb]in/
+**/[Oo]bj/
+x64/
+x86/
+ARM/
+ARM64/
+**/x64/
+**/x86/
+**/ARM/
+**/ARM64/
+[Dd]ebug/
+[Rr]elease/
+**/[Dd]ebug/
+**/[Rr]elease/
+publish/
+**/publish/
+
+# User-specific & temporary settings files
+*.user
+*.userosv
+*.suo
+*.aps
+*.vcxproj.user
+*.vcxproj.user.*
+*.sln.docstates
+
+# Visual Studio temporary & cache files
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+*.cache
+*.tlog
+*.log
+*.idb
+*.pdb
+*.ipch
+*.ilk
+*.obj
+*.o
+*.exp
+*.res
+*.pch
+*.sbr
+*.bsc
+*.iobj
+*.ipdb
+*.lastbuildstate
+*.unsuccessfulbuild
+
+# Python build output & bytecode (if present)
+__pycache__/
+*.py[cod]
+*.class
+build/
+dist/
+
+# IDE / Editor config
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+.DS_Store
