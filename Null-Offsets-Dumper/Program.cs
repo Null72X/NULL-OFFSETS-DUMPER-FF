@@ -1,8 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -11,15 +12,15 @@ class Program
     [STAThread]
     static void Main()
     {
-        Console.Title = "NULL OFFSET EXTRACTOR v3.3";
-
-        PrintHeader();
+        Console.Title = "Null Offsets Dumper";
+        Ui.Init();
+        Ui.WriteHeader();
 
         string filePath = FindDumpFile();
         if (string.IsNullOrEmpty(filePath))
         {
-            PrintError("No dump file selected. Exiting...");
-            Console.ReadKey();
+            Ui.Error("No dump file selected. Exiting...");
+            Ui.Pause();
             return;
         }
 
@@ -27,12 +28,11 @@ class Program
         {
             var stopwatch = Stopwatch.StartNew();
 
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine($"\n[*] Reading: {Path.GetFileName(filePath)} ...");
-            Console.ResetColor();
+            Ui.Section("Reading dump file");
+            Ui.Info($"File: {filePath}");
 
             string[] allLines = File.ReadAllLines(filePath);
-            Console.WriteLine($"[+] Loaded {allLines.Length:N0} lines into memory.");
+            Ui.Success($"Loaded {allLines.Length:N0} lines into memory.");
 
             // ----------------------------------------------------
             // TARGET DEFINITIONS (Original Order Preserved)
@@ -123,17 +123,17 @@ class Program
             // ----------------------------------------------------
             // EXTRACTION EXECUTION
             // ----------------------------------------------------
-            Console.WriteLine("\n[+] Extracting Internal Offsets...");
+            Ui.Section("Extracting internal offsets");
             var extractedOffsets = ExtractTargets(allLines, internalTargets);
             string offsetsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "offsets.txt");
             WriteOffsetsFile(extractedOffsets, offsetsPath);
-            PrintSuccess($"Dumped {extractedOffsets.Count} offsets to: {offsetsPath}");
+            Ui.Success($"Dumped {extractedOffsets.Count(r => r.IsFound)}/{extractedOffsets.Count} offsets to: {offsetsPath}");
 
-            Console.WriteLine("\n[+] Extracting Bones...");
+            Ui.Section("Extracting bones");
             var extractedBones = ExtractTargets(allLines, boneTargets);
             string bonesPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "bones.txt");
             WriteBonesFile(extractedBones, bonesPath);
-            PrintSuccess($"Dumped {extractedBones.Count} bones to: {bonesPath}");
+            Ui.Success($"Dumped {extractedBones.Count(r => r.IsFound)}/{extractedBones.Count} bones to: {bonesPath}");
 
             stopwatch.Stop();
 
@@ -144,13 +144,11 @@ class Program
         }
         catch (Exception ex)
         {
-            PrintError($"EXTRACTION FAILED: {ex.Message}\n{ex.StackTrace}");
+            Ui.Error($"EXTRACTION FAILED: {ex.Message}");
+            Console.WriteLine(ex.StackTrace);
         }
 
-        Console.ForegroundColor = ConsoleColor.DarkGray;
-        Console.WriteLine("\n[Press any key to exit...]");
-        Console.ResetColor();
-        Console.ReadKey();
+        Ui.Pause();
     }
 
     #region Fast Extraction Engine (Preserves Defined Order)
@@ -211,9 +209,7 @@ class Program
                             resultMap[target] = res;
                             foundTargets.Add(target);
 
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine($"  [+] FOUND: {target.ResultName,-16} [\"{target.FieldName}\"] = {hex,-8} (Line: {lineNumber:N0})");
-                            Console.ResetColor();
+                            Ui.Found(target.ResultName, target.FieldName, hex, lineNumber);
                         }
                     }
                 }
@@ -233,9 +229,7 @@ class Program
                 var missingRes = new ExtractionResult(target, "0x0", -1, false);
                 results.Add(missingRes);
 
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine($"  [-] NOT FOUND: {target.ClassName}::{target.FieldName} ({target.ResultName})");
-                Console.ResetColor();
+                Ui.Missing(target.ClassName, target.FieldName, target.ResultName);
             }
         }
 
@@ -316,14 +310,12 @@ class Program
         {
             if (File.Exists(path))
             {
-                PrintSuccess($"Found dump.cs automatically at: {path}");
+                Ui.Success($"Found dump.cs automatically at: {path}");
                 return path;
             }
         }
 
-        Console.ForegroundColor = ConsoleColor.DarkYellow;
-        Console.WriteLine("\n[!] dump.cs not found in local directory. Opening file picker dialog...");
-        Console.ResetColor();
+        Ui.Warning("dump.cs not found in local directory. Opening file picker dialog...");
 
         using (var dialog = new OpenFileDialog
         {
@@ -334,20 +326,12 @@ class Program
         {
             if (dialog.ShowDialog() == DialogResult.OK)
             {
+                Ui.Info($"Selected: {dialog.FileName}");
                 return dialog.FileName;
             }
         }
 
         return null;
-    }
-
-    static void PrintHeader()
-    {
-        Console.ForegroundColor = ConsoleColor.White;
-        Console.WriteLine("==========================================================================");
-        Console.WriteLine("                       NULL X OFFSET & BONES EXTRACTOR");
-        Console.WriteLine("==========================================================================");
-        Console.ResetColor();
     }
 
     static void DisplaySummary(List<ExtractionResult> offsets, List<ExtractionResult> bones, long elapsedMs)
@@ -357,44 +341,33 @@ class Program
         int totalBones = bones.Count;
         int foundBones = bones.Count(b => b.IsFound);
 
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("\n==========================================================================");
-        Console.WriteLine("                             FINAL SUMMARY");
-        Console.WriteLine("==========================================================================");
+        int offsetPercent = totalOffsets == 0 ? 0 : (foundOffsets * 100 / totalOffsets);
+        int bonePercent = totalBones == 0 ? 0 : (foundBones * 100 / totalBones);
+
+        Ui.Section("Final summary");
+
         Console.ForegroundColor = ConsoleColor.White;
-        Console.WriteLine($"  Offsets Extracted : {foundOffsets} / {totalOffsets}");
-        Console.WriteLine($"  Bones Extracted   : {foundBones} / {totalBones}");
-        Console.WriteLine($"  Execution Time    : {elapsedMs} ms");
-        Console.WriteLine($"  Output Directory  : {AppDomain.CurrentDomain.BaseDirectory}");
-        Console.ForegroundColor = ConsoleColor.Yellow;
-        Console.WriteLine("==========================================================================");
+        Console.WriteLine($"  Offsets extracted : {foundOffsets,3} / {totalOffsets,-3}  ({offsetPercent}%)");
+        Console.WriteLine($"  Bones extracted   : {foundBones,3} / {totalBones,-3}  ({bonePercent}%)");
+        Console.WriteLine($"  Execution time    : {elapsedMs:N0} ms");
+        Console.WriteLine($"  Output directory  : {AppDomain.CurrentDomain.BaseDirectory}");
         Console.ResetColor();
 
         var missing = offsets.Concat(bones).Where(r => !r.IsFound).ToList();
         if (missing.Any())
         {
+            Ui.Section("Missing targets");
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"\n[!] {missing.Count} targets were not found in dump:");
             foreach (var item in missing)
             {
-                Console.WriteLine($"    - {item.Target.ClassName}::{item.Target.FieldName} ({item.Target.ResultName})");
+                Console.WriteLine($"  - {item.Target.ClassName}::{item.Target.FieldName} ({item.Target.ResultName})");
             }
             Console.ResetColor();
         }
-    }
-
-    static void PrintSuccess(string message)
-    {
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine($"\n[SUCCESS] {message}");
-        Console.ResetColor();
-    }
-
-    static void PrintError(string message)
-    {
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine($"\n[ERROR] {message}");
-        Console.ResetColor();
+        else
+        {
+            Ui.Success("All requested targets were found.");
+        }
     }
 
     static int CountChar(string str, char ch)
@@ -408,6 +381,94 @@ class Program
     }
     #endregion
 }
+
+#region UI Helper
+static class Ui
+{
+    public static void Init()
+    {
+        try { Console.OutputEncoding = Encoding.UTF8; } catch { }
+        Console.CursorVisible = true;
+    }
+
+    public static void WriteHeader()
+    {
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("╔══════════════════════════════════════════════════════════════════════════╗");
+        Console.WriteLine("║                          Null Offsets Dumper                             ║");
+        Console.WriteLine("╚══════════════════════════════════════════════════════════════════════════╝");
+        Console.ResetColor();
+    }
+
+    public static void Section(string title)
+    {
+        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine($"┌─ {title} " + new string('─', Math.Max(0, 70 - title.Length)));
+        Console.ResetColor();
+    }
+
+    public static void Info(string message)
+    {
+        Console.ForegroundColor = ConsoleColor.Gray;
+        Console.WriteLine($"  [i] {message}");
+        Console.ResetColor();
+    }
+
+    public static void Success(string message)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"  [✓] {message}");
+        Console.ResetColor();
+    }
+
+    public static void Warning(string message)
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine($"  [!] {message}");
+        Console.ResetColor();
+    }
+
+    public static void Error(string message)
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"  [x] {message}");
+        Console.ResetColor();
+    }
+
+    public static void Found(string resultName, string fieldName, string hex, int lineNumber)
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.Write("  ✓ ");
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.Write($"{resultName,-24}");
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.Write($" {fieldName,-28}");
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write($" {hex,-10}");
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine($" line {lineNumber:N0}");
+        Console.ResetColor();
+    }
+
+    public static void Missing(string className, string fieldName, string resultName)
+    {
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.Write("  ✗ ");
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine($"{className}::{fieldName} ({resultName})");
+        Console.ResetColor();
+    }
+
+    public static void Pause()
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGray;
+        Console.WriteLine("\n[Press any key to exit...]");
+        Console.ResetColor();
+        Console.ReadKey();
+    }
+}
+#endregion
 
 #region Data Models
 class ExtractionTarget
